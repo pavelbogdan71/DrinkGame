@@ -8,6 +8,11 @@ public class Player implements Parcelable {
     private int shots;
 
 
+    public void addShot()
+    {
+        shots++;
+    }
+
     @Override
     public String toString() {
         return name;
