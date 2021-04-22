@@ -6,19 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Menu"
-        android:layout_centerHorizontal="true"
-        />
-    <Button
-        android:id="@+id/playButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="Play"
-        android:onClick="playButtonPressed"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="DRINK GAME" />
+
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_corners"
+            android:width="200dp"
+            android:height="80dp"
+            android:fontFamily="serif"
+            android:onClick="playButtonPressed"
+            android:shadowColor="#534848"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+            android:text="Play"
+            android:textSize="30dp"
+            app:backgroundTint="#7C3232" />
+    </LinearLayout>
+
+
+
 </RelativeLayout>
