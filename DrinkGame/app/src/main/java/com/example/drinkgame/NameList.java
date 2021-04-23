@@ -71,12 +71,12 @@ public class NameList extends AppCompatActivity {
                     // Cast the list view each item as text view
                     TextView item = (TextView) super.getView(position,convertView,parent);
 
+                    item.setGravity(Gravity.CENTER);
                     // Set the typeface/font for the current item
                     item.setTypeface(typefaceList);
 
                     // Set the list view item's text color
                     item.setTextColor(Color.parseColor("#821f00"));
-
 
                     // Change the item text size
                     item.setTextSize(TypedValue.COMPLEX_UNIT_DIP,30);

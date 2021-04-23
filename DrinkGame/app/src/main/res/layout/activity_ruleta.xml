@@ -4,28 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#DAA848">
 
 
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_centerVertical="true"
     android:gravity="center">
 
         <ListView
             android:id="@+id/playersList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="#7C3232"
+            android:width="150dp"
+            android:height="50dp"
+            android:textSize="20dp"
             android:text="SPIN"
             android:onClick="spinWheel"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="#7C3232"
+            android:width="150dp"
+            android:height="50dp"
+            android:textSize="20dp"
             android:text="STATS"
             android:onClick="showStats"/>
 
@@ -47,6 +61,7 @@
         android:text="PLAYER"
         android:textColor="@color/white"
         android:textSize="50dp"
+        android:layout_marginTop="50dp"
         android:visibility="invisible"/>
 
 

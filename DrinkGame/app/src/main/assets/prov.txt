@@ -1,3 +1,4 @@
-prov1
-prov2
-prov3
+face 10 flotari
+bea tot paharul
+se invarte 20 de secunde
+trebuie sa numere din 3 in 3 pana la 66 in 10 secunde altfel bea 2 shot-uri
