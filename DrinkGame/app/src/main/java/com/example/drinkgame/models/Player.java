@@ -3,7 +3,7 @@ package com.example.drinkgame.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Player implements Parcelable {
+public class Player implements Parcelable,Comparable<Player> {
     private String name;
     private int shots;
 
@@ -64,4 +64,9 @@ public class Player implements Parcelable {
             return new Player[size];
         }
     };
+
+    @Override
+    public int compareTo(Player otherPlayer) {
+        return Integer.compare(otherPlayer.shots,this.shots );
+    }
 }

@@ -39,6 +39,8 @@ import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -59,6 +61,7 @@ public class Ruleta extends AppCompatActivity {
         ArrayList<Player> players = intent.getParcelableArrayListExtra("players");
 
         listView = (ListView)findViewById(R.id.playersList);
+        stats = (TextView)findViewById(R.id.stats);
 
         typefaceList = Typeface.createFromAsset(getAssets(),"LuckiestGuy-Regular.ttf");
         ArrayAdapter<Player> adapter = new ArrayAdapter<Player>(this, android.R.layout.simple_list_item_1,players){
@@ -123,6 +126,8 @@ public class Ruleta extends AppCompatActivity {
             textView=(TextView)findViewById(R.id.provocare);
 
             textView.setVisibility(View.INVISIBLE);
+
+            stats.setVisibility(View.INVISIBLE);
 
             ArrayAdapter<Player> adapter = new ArrayAdapter<Player>(this, android.R.layout.simple_list_item_1,players){
                 @Override
@@ -195,23 +200,33 @@ public class Ruleta extends AppCompatActivity {
 
     }
 
-
     public void showStats(View view){
 
-        stats = (TextView)findViewById(R.id.stats);
+
 
         Intent intent = getIntent();
         ArrayList<Player> players = intent.getParcelableArrayListExtra("players");
 
         String statistici="";
 
+        Collections.sort(players);
+
         for(Player player : players)
         {
-            statistici+=(player.getName()+" a baut "+player.getShots()+" shot-uri\n");
+            statistici+=(player.getName()+" a picat de "+player.getShots()+" la ruleta\n");
         }
 
         stats.setText(statistici);
-        stats.setVisibility(View.VISIBLE);
+        stats.setGravity(Gravity.CENTER);
+
+        if(stats.getVisibility()==View.VISIBLE)
+        {
+            stats.setVisibility(View.INVISIBLE);
+        }
+        else{
+            stats.setVisibility(View.VISIBLE);
+        }
+
     }
 
 }

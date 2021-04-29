@@ -59,17 +59,19 @@
             android:text="STATS"
             android:onClick="showStats"/>
 
-        <TextView
-            android:id="@+id/stats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:textColor="#f7f0a1"
-            android:background="#6b3f10"
-            android:layout_centerHorizontal="true"/>
     </LinearLayout>
 
-
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        android:textColor="#f7f0a1"
+        android:background="#6b3f10"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"/>
 
 
 </RelativeLayout>
